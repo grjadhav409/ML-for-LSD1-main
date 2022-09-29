@@ -243,13 +243,19 @@ def fit_result(x, y, estimator, random_seeds_start = 2, random_seeds_stop = 62, 
     avg_train_rmse
     avg_rmse
 
+
     train_score_std
     test_score_std
     train_rmse_std
     rmse_std
 
+    l = ["{:.3f}".format(avg_train_score),"{:.3f}".format(avg_score), "{:.3f}".format(avg_train_rmse), "{:.3f}".format(avg_rmse), "{:.3f}".format(train_score_std), "{:.3f}".format(test_score_std), "{:.3f}".format(train_rmse_std), "{:.3f}".format(rmse_std)]
+    return l
 
 
+
+
+"""
     print('The average train score of all random states:{:.3f}'.format(avg_train_score))
     print('The average test score of all random states:{:.3f}'.format(avg_score))
     print('The average train rmse of all random states:{:.3f}'.format(avg_train_rmse))
@@ -264,7 +270,7 @@ def fit_result(x, y, estimator, random_seeds_start = 2, random_seeds_stop = 62, 
     print('---------------------------------')
     print('Time for fitting: %f seconds' %(time.time()-start), flush=True)
     print('*********************************')
-
+"""
 def extract_data_for_plot(y, interval = None):
     '''
     work with utils.plot_multi_learning_curves
@@ -402,13 +408,13 @@ def plot_multi_learning_curves(x, y, estimator1, estimator2, estimator3, random_
         plt.plot(test_errors3_x, test_errors3, color = 'grey', linestyle = '-', linewidth = 1, label = 'DT Test R\u00b2') # label = 'DT Train R\u00b2'
 
     else:
-        raise ValurError('mode type rather \'rmse\' or \'r2\'')
+        raise ValueError('mode type rather \'rmse\' or \'r2\'')
 
     # save figures
     if autosave == 'y':
 
         if path is None:
-            path = os.path.join(os.getcwd(), 'figures')
+            path = os.path.join(os.getcwd(), 'results')
         else:
             path = path
         print('Current path is:', path)
@@ -427,4 +433,4 @@ def plot_multi_learning_curves(x, y, estimator1, estimator2, estimator3, random_
     elif autosave == 'n':
         pass
     else:
-        raise ValurError('autosave rather \'n\' or \'y\'')
+        raise ValueError('autosave rather \'n\' or \'y\'')

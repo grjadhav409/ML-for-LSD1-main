@@ -36,5 +36,5 @@ for smile in original_dataset['Smiles']:
         else:
             pass
 
-save_dataset(threshold_7, path = './datasets/screen_results/in-vitro_zinc/', file_name = 'threshold_7', idx = False)
-save_dataset(de_threshold_7, path = './datasets/screen_results/in-vitro_zinc/', file_name = 'de_threshold_7', idx = False)
+save_dataset(threshold_7, path = 'results/', file_name = 'threshold_7', idx = False)
+save_dataset(de_threshold_7, path = 'results/', file_name = 'de_threshold_7', idx = False)
