@@ -45,6 +45,3 @@ The screening dataset can be found in https://zinc.docking.org/substances/subset
 
 #### Utils
 `utils.py`, `rdkit_utils.py` and `nn_utils.py`
-
-## Acknowledgement
-I would like to thank Miss Yufan Liu from University of Surrey for her contribution in code validation and visualization.
