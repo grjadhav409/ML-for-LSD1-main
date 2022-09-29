@@ -9,7 +9,7 @@ from sklearn.manifold import TSNE
 
 np.random.seed(42)
 
-path = os.path.join(os.getcwd(), 'figures')
+path = os.path.join(os.getcwd(), 'results')
 print('Current path is:', path)
 
 if os.path.exists(path) == True:
@@ -35,7 +35,7 @@ plt.ylabel('t-SNE Reduced Dimension 2',fontproperties = 'Times New Roman', size 
 plt.scatter(x_tsne[:, 0], x_tsne[:,1],c= y_values,vmin= 3, vmax= 9, s= 20, cmap=cm)
 plt.colorbar()
 plt.text(58, -70, "pChEMBL Value", fontproperties = 'Times New Roman', size = 18)
-plt.savefig("figures/TSNE.png", bbox_inches='tight', pad_inches= 0)
+plt.savefig("results/TSNE.png", bbox_inches='tight', pad_inches= 0)
 
-tsne_image = Image.open('figures/TSNE.png')
+tsne_image = Image.open('results/TSNE.png')
 tsne_image.show()
