@@ -1,3 +1,6 @@
+### to get smiles csv with higher than 7 pchembl value
+
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -6,6 +9,11 @@ import time
 import os
 from sklearn.svm import SVR
 import joblib
+
+
+import warnings
+warnings.filterwarnings("ignore")
+
 
 import rdkit
 from rdkit import Chem
